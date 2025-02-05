@@ -12,7 +12,10 @@
 </head>
 
 <body>
-
+  <!-- 預載畫面 -->
+  <div id="preloader">
+    <div class="loader"></div>
+  </div>
     <!-- 導航列 -->
     <nav>
         <ul>
@@ -157,6 +160,20 @@
 
     <!-- JavaScript：點擊項書籤篩選成員 -->
     <script>
+        // 當頁面完全載入後執行
+        window.addEventListener("load", function () {
+            const preloader = document.getElementById("preloader");
+            const content = document.getElementById("content");
+
+            // 先讓預載畫面淡出
+            preloader.classList.add("fade-out");
+
+            // 0.5 秒後完全隱藏並顯示內容
+            setTimeout(() => {
+                preloader.style.display = "none";
+                content.style.display = "block";
+            }, 500);
+        });
         const bookmarkItems = document.querySelectorAll('.bookmark-menu li');
         const members = document.querySelectorAll('.member');
 
