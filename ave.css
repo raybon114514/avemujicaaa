@@ -48,7 +48,7 @@ section {
   min-height: 80vh;
 }
 #home {
-  background: url('https://i.namu.wiki/i/PfaryZuejbG8pFWpBrJxQB_l0OziyxShY8g_0CAbEeNJPOUSNg07jKzzuIt7A8mZfi0ruWhBhl7MPifoxDBIAQ.webp') no-repeat center center/cover;
+  background: url(/avm.webp) no-repeat center center/cover;
   color: #fff;
   text-align: center;
   position: relative;
