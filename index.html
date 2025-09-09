@@ -12,11 +12,11 @@
 </head>
 
 <body>
-  <!-- 預載畫面 -->
+
   <div id="preloader">
     <div class="loader"></div>
   </div>
-    <!-- 導航列 -->
+
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
@@ -26,7 +26,7 @@
         </ul>
     </nav>
 
-    <!-- 首頁區塊 -->
+
     <section id="home">
         <div class="content">
             <h1 style="font-size:48px; margin-bottom:20px;" class="shape">…ようこそ。Ave Mujica の世界へ</h1>
@@ -34,27 +34,26 @@
         </div>
     </section>
 
-    <!-- 團體成員區塊 -->
     <section id="members">
         <h2 style="color: aliceblue;">Members</h2>
         <br><br>
         <div class="members-container">
-            <!-- 成員列表 -->
+
             <div class="member-list">
-                <!-- 成員 1 -->
+
                 <div class="member" data-member="member1">
                     <img src="https://mlw9fdw7gmdrd.cdn6.editmysite.com/uploads/1/4/0/7/140730496/s194042708223460788_c4JJVHQHBLYEUY32ESA4KTE35_iBOWTLTUXRDK2CJR3VYWIGYDW_w640.jpeg"
                         alt="成員 1">
                     <h3>Obilivionis</h3>
                     <p>Piano</p>
                 </div>
-                <!-- 成員 2 -->
+
                 <div class="member" data-member="member2">
                     <img src="https://img.qoo-img.com/file/2023/7/2/4017549111254280a527ae1799844ade.png" alt="成員 3">
                     <h3>Mortis</h3>
                     <p>Guitar</p>
                 </div>
-                <!-- 成員 3 -->
+
                 <div class="member" data-member="member3">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCExHHjEFikUQ_oAgB9R4WyKZYhuu5b_Cmrg&s"
                         alt="成員 2">
@@ -62,14 +61,14 @@
                     <p>Vocal</p>
                     <p>Guitar</p>
                 </div>
-                <!-- 成員 4 -->
+
                 <div class="member" data-member="member4">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfYgFjLuHOFI3b5m0KmTePTYKimWcD3gbCSA&s"
                         alt="成員 3">
                     <h3>Amoris</h3>
                     <p>Drum</p>
                 </div>
-                <!-- 成員 5 -->
+
                 <div class="member" data-member="member5">
                     <img src="https://pbs.twimg.com/media/F1n2A3vWcAAt4Br.jpg" alt="成員 3">
                     <h3>Timoris</h3>
@@ -78,7 +77,6 @@
 
             </div>
 
-            <!-- 右側項書籤 -->
             <div class="bookmark-menu">
                 <ul>
                     <li data-member="all" class="active">Ave mujica</li>
@@ -92,7 +90,6 @@
         </div>
     </section>
 
-    <!-- 關於我們區塊 -->
     <section id="music">
         <div class="about-content">
             <h2 style="font-size:32px; margin-bottom:20px;">Music</h2>
@@ -158,17 +155,17 @@
     </footer>
 
 
-    <!-- JavaScript：點擊項書籤篩選成員 -->
+
     <script>
-        // 當頁面完全載入後執行
+
         window.addEventListener("load", function () {
             const preloader = document.getElementById("preloader");
             const content = document.getElementById("content");
 
-            // 先讓預載畫面淡出
+
             preloader.classList.add("fade-out");
 
-            // 0.5 秒後完全隱藏並顯示內容
+
             setTimeout(() => {
                 preloader.style.display = "none";
                 content.style.display = "block";
@@ -177,16 +174,16 @@
         const bookmarkItems = document.querySelectorAll('.bookmark-menu li');
         const members = document.querySelectorAll('.member');
 
-        // 為每個書籤加上 click 事件
+
         bookmarkItems.forEach(item => {
             item.addEventListener('click', function () {
-                // 先移除所有項目 active 樣式，再加入目前點選的
+
                 bookmarkItems.forEach(i => i.classList.remove('active'));
                 this.classList.add('active');
 
                 const selected = this.getAttribute('data-member');
                 members.forEach(member => {
-                    // 若選擇全部則全部顯示
+
                     if (selected === 'all' || member.getAttribute('data-member') === selected) {
                         member.style.display = 'block';
                         member.style.animation = 'fadeInUp 1s';
@@ -200,3 +197,4 @@
 
 </body>
 </html>
+
